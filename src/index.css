@@ -7,6 +7,14 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(180deg, #021b79 0%, #0575e6 100%);
+  background: linear-gradient(180deg, #021b79 0%, #000 100%);
   color: #fcfcff;
+}
+
+button {
+  background: #1646a0;
+  color: #fff;
+  padding: 0 45px;
+  border: 2px solid #fff;
+  border-radius: 25px;
 }
