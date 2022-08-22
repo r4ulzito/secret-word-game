@@ -1,0 +1,15 @@
+.game h1 {
+  font-size: 2.5rem;
+}
+
+.game span {
+  font-weight: bold;
+}
+
+.tip span {
+  color: #ecfa00;
+}
+
+.word_container {
+  margin: 1.5rem;
+}

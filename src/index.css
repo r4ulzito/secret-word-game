@@ -17,4 +17,15 @@ button {
   padding: 0 45px;
   border: 2px solid #fff;
   border-radius: 25px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: "Poppins", sans-serif;
+}
+
+button:hover {
+  background-color: #0923af;
 }
