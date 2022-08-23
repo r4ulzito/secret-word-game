@@ -1,3 +1,7 @@
+.game {
+  margin-top: 50px;
+}
+
 .game h1 {
   font-size: 2.5rem;
 }
@@ -12,4 +16,48 @@
 
 .word_container {
   margin: 1.5rem;
+  padding: 1.5rem;
+  border: 20px solid #ecfa00;
+  display: flex;
+}
+
+.letter,
+.blank_square {
+  font-size: 70px;
+  line-height: 1.5;
+  border: 3px solid #000;
+  height: 100px;
+  width: 100px;
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+.letter_container {
+  margin-top: 50px;
+}
+
+.letter_container p {
+  margin-bottom: 1.2rem;
+}
+
+.letter_container form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.letter_container input {
+  height: 50px;
+  width: 50px;
+  font-size: 2rem;
+  outline: 0;
+  border: none;
+  text-align: center;
+}
+
+.wrong_letters_container {
+  margin-top: 35px;
 }
