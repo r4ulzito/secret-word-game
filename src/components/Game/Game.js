@@ -54,7 +54,7 @@ const Game = ({
       </div>
       <div className="letter_container">
         <p>Chute uma letra</p>
-        <form onSubmit={handleSubmit} autocomplete="off">
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
             name="letter"
@@ -63,6 +63,7 @@ const Game = ({
             onChange={(e) => setLetter(e.target.value)}
             value={letter}
             ref={letterInputRef}
+            autocomplete="off"
           />
           <button>Chutar</button>
         </form>
