@@ -29,22 +29,26 @@
   justify-content: flex-start;
 }
 
-.word_score {
+/* .word_score {
   display: flex;
   justify-content: space-between;
   animation: appearEffect;
   animation-duration: 2s;
   animation-fill-mode: forwards;
   opacity: 0;
-}
+} */
 
-.final_score {
+.final_score,
+.word_score {
   display: flex;
   justify-content: space-between;
   animation: appearEffect 2s;
-  animation-delay: 0.3s;
   animation-fill-mode: forwards;
   opacity: 0;
+}
+
+.final_score {
+  animation-delay: 0.3s;
 }
 
 .word_score span,
