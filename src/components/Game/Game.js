@@ -54,7 +54,7 @@ const Game = ({
       </div>
       <div className="letter_container">
         <p>Chute uma letra</p>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} autocomplete="off">
           <input
             type="text"
             name="letter"
