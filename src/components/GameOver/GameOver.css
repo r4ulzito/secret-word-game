@@ -32,7 +32,7 @@
 .word_score {
   display: flex;
   justify-content: space-between;
-  animation: appearEffect 2s;
+  -webkit-animation: appearEffect 2s;
   -webkit-animation-fill-mode: forwards;
   opacity: 0;
 }
@@ -40,9 +40,9 @@
 .final_score {
   display: flex;
   justify-content: space-between;
-  animation: appearEffect 2s;
-  animation-delay: 0.3s;
-  animation-fill-mode: forwards;
+  -webkit-animation: appearEffect 2s;
+  -webkit-animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
   opacity: 0;
 }
 
