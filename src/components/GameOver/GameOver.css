@@ -33,7 +33,7 @@
   display: flex;
   justify-content: space-between;
   animation: appearEffect 2s;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
   opacity: 0;
 }
 
@@ -42,7 +42,7 @@
   justify-content: space-between;
   animation: appearEffect 2s;
   animation-delay: 0.3s;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
   opacity: 0;
 }
 
