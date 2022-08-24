@@ -13,6 +13,7 @@ const Game = ({
   wrongLetters,
   guesses,
   score,
+  record,
 }) => {
   const [letter, setLetter] = useState("");
   const letterInputRef = useRef(null);
@@ -28,9 +29,13 @@ const Game = ({
 
   return (
     <div className="game">
-      <p className="points">
+      <p className="record_points">
+        Maior Pontuação:<span> {record}</span>
+      </p>
+      <p>
         <span>Pontuação: {score}</span>
       </p>
+
       <h1>Advinhe a palavra</h1>
       <h3 className="tip">
         Dica: <span>{pickedCategory}</span>

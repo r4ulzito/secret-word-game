@@ -17,7 +17,7 @@ const stages = [
 ];
 
 // quantidade padrao de tentativas
-const guessesQtd = 3;
+const guessesQtd = 5;
 
 function App() {
   const [gameStage, setGameStage] = useState(stages[0].name);
@@ -30,6 +30,8 @@ function App() {
   const [wrongLetters, setWrongLetters] = useState([]);
   const [guesses, setGuesses] = useState(guessesQtd);
   const [score, setScore] = useState(0);
+  const [guessedWords, setGuessedWords] = useState(0);
+  const [record, setRecord] = useState(0);
 
   const pickWordAndCategory = useCallback(() => {
     // escolhe uma categoria aleatória
@@ -60,8 +62,6 @@ function App() {
     setPickedCategory(category);
     setLetters(wordLetters);
 
-    console.log(wordLetters);
-
     setGameStage(stages[1].name);
   }, [pickWordAndCategory]);
 
@@ -69,6 +69,10 @@ function App() {
   const verifyLetter = (letter) => {
     const normLetter = letter.toLowerCase();
 
+    // Verifica se a letra é um caractere especial ou numero
+    if (!normLetter.match("[a-zA-Z-ç]")) {
+      return;
+    }
     // verifica se a letra ja foi utilizada
     if (
       guessedLetters.includes(normLetter) ||
@@ -101,6 +105,7 @@ function App() {
   const clearGameStates = () => {
     setScore(0);
     setGuesses(guessesQtd);
+    setGuessedWords(0);
   };
 
   // verifica se as tentativas acabaram
@@ -118,14 +123,23 @@ function App() {
     const uniqueLetters = [...new Set(letters)];
 
     // condição de vitória
-    if (guessedLetters.length === uniqueLetters.length) {
+    if (
+      guessedLetters.length === uniqueLetters.length &&
+      guessedLetters.length !== 0
+    ) {
       // adciona score
       setScore((actualScore) => (actualScore += 100));
 
+      // adiciona ao contador de palavras adivinhadas
+      setGuessedWords((actualGuessesWords) => (actualGuessesWords += 1));
       // reseta o jogo com uma nova palavra
       startGame();
     }
-  }, [guessedLetters, letters, startGame]);
+
+    if (score >= record) {
+      setRecord(score);
+    }
+  }, [guessedLetters, letters, startGame, record, score, setRecord]);
 
   // reinicializa o jogo
   const retry = () => {
@@ -148,9 +162,12 @@ function App() {
           wrongLetters={wrongLetters}
           guesses={guesses}
           score={score}
+          record={record}
         />
       )}
-      {gameStage === "end" && <GameOver retry={retry} score={score} />}
+      {gameStage === "end" && (
+        <GameOver retry={retry} score={score} guessedWords={guessedWords} />
+      )}
     </div>
   );
 }

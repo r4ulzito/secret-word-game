@@ -1,12 +1,44 @@
 .start {
   margin-top: 150px;
+  text-align: center;
+  animation: containerAppearEffect 1s;
 }
 
 .start h1 {
-  font-size: 3.5rem;
+  font-size: 5rem;
 }
 
 .start p {
   margin-bottom: 2rem;
   color: #ecfa00;
+  animation: paragraphAnimation 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes paragraphAnimation {
+  0% {
+    transform: rotate(1.6deg);
+  }
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-1.6deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(1.6deg);
+  }
+}
+
+@keyframes containerAppearEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

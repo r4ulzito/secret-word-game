@@ -1,4 +1,76 @@
-.game_over h2 span {
+.game_over {
+  margin-top: 150px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.game_over h1 {
+  margin: 0;
+  animation: appearEffect;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.game_over button {
+  animation: buttonAppearEffect 2s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.7s;
+  opacity: 0;
+}
+
+.score_container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.word_score {
+  display: flex;
+  justify-content: space-between;
+  animation: appearEffect 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.final_score {
+  display: flex;
+  justify-content: space-between;
+  animation: appearEffect 2s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.word_score span,
+.final_score span {
   color: #ecfa00;
   font-size: 1.5rem;
+}
+
+@keyframes appearEffect {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes buttonAppearEffect {
+  0% {
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
