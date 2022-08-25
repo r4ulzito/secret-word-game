@@ -1,7 +1,7 @@
 <h1 align="center">🔎 Secret Word</h1>
 
 <div align="center">
-  <img src="https://www.acheicampos.com.br/uploads/advertiser/default_anunciante_thumbnail.png" alt="Descrição da imagem">
+  <img src="https://user-images.githubusercontent.com/97764322/186693167-5df49b34-43cb-4748-8362-02b1bd4a946a.gif" alt="preview gif">
 </div>
 
 > 🔎 Um jogo de adivinhar palavras, teste seus conhecimentos e supere seus recordes!
