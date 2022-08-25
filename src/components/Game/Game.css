@@ -1,5 +1,5 @@
 .game {
-  margin-top: 30px;
+  margin-top: 15px;
   text-align: center;
   animation: containerAppearEffect 1s;
   animation-fill-mode: forwards;
@@ -46,7 +46,7 @@
 }
 
 .letter_container {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .letter_container p {
@@ -71,7 +71,11 @@
 }
 
 .wrong_letters_container {
-  margin-top: 35px;
+  margin-top: 25px;
+}
+
+.wrong_letters_container p {
+  margin: 0;
 }
 
 @keyframes containerAppearEffect {
