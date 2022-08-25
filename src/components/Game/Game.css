@@ -1,5 +1,5 @@
 .game {
-  margin-top: 15px;
+  margin-top: 25px;
   text-align: center;
   animation: containerAppearEffect 1s;
   animation-fill-mode: forwards;
@@ -21,8 +21,16 @@
   color: #ecfa00;
 }
 
+.tip {
+  margin: 0 0 10px;
+}
+
 .tip span {
   color: #ecfa00;
+}
+
+.game .guesses_paragraph {
+  margin: 0;
 }
 
 .word_container {
@@ -71,7 +79,7 @@
 }
 
 .wrong_letters_container {
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .wrong_letters_container p {
